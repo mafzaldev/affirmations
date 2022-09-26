@@ -10,6 +10,24 @@
   width: 100vw;
   height: 100vh;
   font-family: "Dosis", sans-serif;
-  text-align: center;
   transition: background-color 1.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.affirmation-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
