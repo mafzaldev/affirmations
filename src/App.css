@@ -18,20 +18,27 @@
 }
 
 .affirmation {
-  width: 100vw;
-  height: 50vh;
+  width: 95vw;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .affirmation-text {
-  width: 95%;
+  width: 80%;
   color: #fff;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   text-align: center;
+  user-select: none;
   animation: fadeIn 1.2s;
+  transition: all 0.5s;
+}
+
+.affirmation-text:hover {
+  text-shadow: 3px 3px #1e1e1e;
 }
 
 .affirmation-text::first-letter {
@@ -49,6 +56,7 @@ iframe {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -58,6 +66,7 @@ iframe {
   0% {
     bottom: -5%;
   }
+
   100% {
     bottom: 5%;
   }
@@ -72,13 +81,14 @@ iframe {
   }
 
   .affirmation-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   @keyframes moveInMobile {
     0% {
       bottom: -5%;
     }
+
     100% {
       bottom: 10%;
     }
