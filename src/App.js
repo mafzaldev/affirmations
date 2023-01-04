@@ -36,9 +36,10 @@ function App() {
   useEffect(() => {
     const getAffirmations = async () => {
       let response = await fetch(
-        "https://dulce-affirmations-api.herokuapp.com/affirmation/index"
+        "https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
       );
-      let tempAffirmations = await response.json();
+      let data = await response.json();
+      let tempAffirmations = await data.quotes;
       let shuffledAffirmations = shuffleAffirmations(tempAffirmations);
       setAffirmations(shuffledAffirmations);
     };
@@ -59,7 +60,7 @@ function App() {
     <div className="App" style={{ backgroundColor: colors[index] }}>
       <div className="affirmation">
         <div key={uuidv4()} className="affirmation-text">
-          {affirmations[currentAff].phrase}
+          {affirmations[currentAff].quote}
         </div>
       </div>
       <iframe
